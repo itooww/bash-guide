@@ -1025,7 +1025,9 @@ ${#varname}     # 変数の値の長さを文字列として返す
 ```
 
 ## 2.4. Functions
-As in almost any programming language, you can use functions to group pieces of code in a more logical way or practice the divine art of recursion. Declaring a function is just a matter of writing function my_func { my_code }. Calling a function is just like calling another program, you just write its name.
+ほぼ全てのプログラミング言語と同様に、関数を使用してコードをよりロジカルな方法でグループ化することも、再帰アートの練習をすることも出来ます。
+関数を宣言することは、単に `function my_func {my_code}` と書くだけです。
+関数の呼び出しは、別のプログラムを呼び出すことと同じで、名前を書くだけです。
 
 ```bash
 functname() {
@@ -1047,7 +1049,10 @@ function say {
 say "hello world!"
 ```
 
-When you run the above example the `hello` function will output "world!". The above two functions `hello` and `say` are identical. The main difference is function `say`. This function, prints the first argument it receives. Arguments, within functions, are treated in the same manner as arguments given to the script.
+上記の例を実行すると、`hello` 関数は `world!` を出力します。
+上記の2つの関数 `hello` と `say` は同じです。
+主な違いは、関数 `say` で、この関数は、受け取った最初の引数を出力する。
+関数内の引数は、スクリプトに与えられた引数と同じ方法で扱われる。
 
 ## 2.5. Conditionals
 
