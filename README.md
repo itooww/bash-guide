@@ -1155,8 +1155,9 @@ done
 # 3. Tricks
 
 ## Set an alias
-Open `bash_profile` by running following command `nano ~/.bash_profile`
-> alias dockerlogin='ssh www-data@adnan.local -p2222'  # add your alias in .bash_profile
+次のコマンドを実行して `bash_profile` を開く `nano ~/.bash_profile`
+
+> alias dockerlogin='ssh www-data@adnan.local -p2222'  # .bash_profile にエイリアスを追加する
 
 ## To quickly go to a specific directory
 nano ~/.bashrc
@@ -1169,7 +1170,7 @@ cd $hotellogs
 
 ## Exit traps
 
-Make your bash scripts more robust by reliably performing cleanup.
+クリーンアップを確実に実行することで、bash スクリプトをより堅牢なものにする。
 
 ```bash
 function finish {
@@ -1181,18 +1182,21 @@ trap finish EXIT
 
 ## Saving your environment variables
 
-When you do `export FOO = BAR`, your variable is only exported in this current shell and all its children, to persist in the future you can simply append in your `~/.bash_profile` file the command to export your variable
+`export FOO = BAR` を実行すると、変数は現在のシェルと、その全ての子でのみ実行される。
+変数を永続するには `~/.bash_profile` ファイルに変数をエクスポートするコマンドを追加する。
+
 ```bash
 echo export FOO=BAR >> ~/.bash_profile
 ```
 
 ## Accessing your scripts
 
-You can easily access your scripts by creating a bin folder in your home with `mkdir ~/bin`, now all the scripts you put in this folder you can access in any directory.
+`mkdir ~/bin` を使用して home に bin フォルダを作ることで簡単にスクリプトにアクセスできる。
+このフォルダに置かれた全てのスクリプトはどのディレクトリにもアクセスできる。
 
-If you can not access, try append the code below in your `~/.bash_profile` file and after do `source ~/.bash_profile`.
+アクセス出来ない場合は、以下のコードを `~/.bash_profile` ファイルに追加してから、`source ~/.bash_profile` を実行してみて下さい。
 ```bash
-    # set PATH so it includes user's private bin if it exists
+    # PATH を設定して、ユーザーのプライベート bin が存在する場合はそれを含める
     if [ -d "$HOME/bin" ] ; then
         PATH="$HOME/bin:$PATH"
     fi
