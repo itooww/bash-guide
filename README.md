@@ -1117,9 +1117,10 @@ file1 -ot file2     # file1 が file2 より古い
 
 ## 2.6. Loops
 
-There are three types of loops in bash. `for`, `while` and `until`.
+bash には3種類のループがある。
+`for`, `while`, `util` です。
 
-Different `for` Syntax:
+`for` Syntax:
 ```bash
 for x := 1 to 10 do
 begin
