@@ -1203,7 +1203,10 @@ echo export FOO=BAR >> ~/.bash_profile
 ```
 
 # 4. Debugging
-You can easily debug the bash script by passing different options to `bash` command. For example `-n` will not run commands and check for syntax errors only. `-v` echo commands before running them. `-x` echo commands after command-line processing.
+様々なオプションを `bash` コマンドに渡すことで、bash スクリプトを簡単にデバッグすることができる。
+たとえば、`-n` コマンドを実行せず、構文エラーのみチェックする。
+`-v` コマンドを実行する前に echo コマンドを実行する。
+`-x` コマンドラインプロセスの後に echo コマンドを実行する。
 
 ```bash
 bash -n scriptname
@@ -1218,6 +1221,7 @@ bash -x scriptname
 - Spread the word
 
 ## Translation
+- [English | Original](https://github.com/Idnan/bash-guide)
 - [Turkish | Türkçe](https://github.com/omergulen/bash-guide)
 
 ## License
