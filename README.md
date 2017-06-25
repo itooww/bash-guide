@@ -1055,8 +1055,9 @@ say "hello world!"
 関数内の引数は、スクリプトに与えられた引数と同じ方法で扱われる。
 
 ## 2.5. Conditionals
-
-The conditional statement in bash is similar to other programming languages. Conditions have many form like the most basic form is `if` expression `then` statement where statement is only executed if expression is true.
+bash の条件分は他のプログラミング言語に似ている。
+条件分には、最も基本的なフォームと同じように多くのフォームがあります。
+`if expression then` ステートメントは、式が true の場合のみ実行される。
 
 ```bash
 if [expression]; then
@@ -1066,7 +1067,7 @@ else
 fi
 ```
 
-Sometime if conditions becoming confusing so you can write the same condition using the `case statements`.
+条件が混乱するようになったら、`case expression` を使用して同じ条件を書くことができる。
 
 ```bash
 case expression in
@@ -1081,37 +1082,37 @@ esac
 Expression Examples:
 
 ```bash
-statement1 && statement2  # both statements are true
-statement1 || statement2  # at least one of the statements is true
+statement1 && statement2  # 両方 true
+statement1 || statement2  # 少なくとも1つが true
 
-str1=str2       # str1 matches str2
-str1!=str2      # str1 does not match str2
-str1<str2       # str1 is less than str2
-str1>str2       # str1 is greater than str2
--n str1         # str1 is not null (has length greater than 0)
--z str1         # str1 is null (has length 0)
+str1=str2       # str1 が str2 と同じ
+str1!=str2      # str1 が str2 と異なる
+str1<str2       # str1 が str2 より小さい
+str1>str2       # str1 が str2 より大きい
+-n str1         # str1 が null ではない (0 より大きい長さを持つ)
+-z str1         # str1 が null (長さが 0)
 
--a file         # file exists
--d file         # file exists and is a directory
--e file         # file exists; same -a
--f file         # file exists and is a regular file (i.e., not a directory or other special type of file)
--r file         # you have read permission
--s file         # file exists and is not empty
--w file         # you have write permission
--x file         # you have execute permission on file, or directory search permission if it is a directory
--N file         # file was modified since it was last read
--O file         # you own file
--G file         # file's group ID matches yours (or one of yours, if you are in multiple groups)
+-a file         # file が存在している
+-d file         # file が存在し、ディレクトリである
+-e file         # file が存在している; -a と同じ
+-f file         # file が存在し、通常のファイル (言い換えれば, ディレクトリやその他特殊なファイルではない)
+-r file         # 読み取り権限を持っている
+-s file         # file が存在し、空ではない
+-w file         # 書き込み権限を持っている
+-x file         # 実行権限を持っている、またはディレクトリの場合はディレクトリ検索権限を持っている
+-N file         # ファイルが最後に読み込まれてから変更された
+-O file         # 自分の所有ファイル
+-G file         # ファイルのグループ ID が自分のものと一致する (また、複数グループに属している場合はそのうちの一つと一致する)
 
-file1 -nt file2     # file1 is newer than file2
-file1 -ot file2     # file1 is older than file2
+file1 -nt file2     # file1 が file2 より新しい
+file1 -ot file2     # file1 が file2 より古い
 
--lt     # less than
--le     # less than or equal
--eq     # equal
--ge     # greater than or equal
--gt     # greater than
--ne     # not equal
+-lt     # 未満
+-le     # 未満か同値
+-eq     # 同値
+-ge     # 以上か同値
+-gt     # 以上
+-ne     # 等しくない
 ```
 
 ## 2.6. Loops
