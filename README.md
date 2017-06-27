@@ -1012,7 +1012,6 @@ ${varname:offset:length}    # 部分文字列展開を行う。これは、offse
 
 ## 2.3 String Substitution
 文字列を操作する方法の構文をチェック
-Check some of the syntax on how to manipulate strings
 
 ```bash
 ${variable#pattern}         # パターンが変数の値の先頭に一致する場合は、一致する最も短い部分を削除し、残りの部分を返す
