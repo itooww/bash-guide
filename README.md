@@ -533,7 +533,7 @@ amet.
 
 *行数と共に example.txt を表示*
 ```bash
-nl -s". " example.txt 
+nl -s ". " example.txt 
 ```
 ```bash
      1. Lorem ipsum
